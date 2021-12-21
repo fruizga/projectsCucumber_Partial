@@ -6,6 +6,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
+import tasks.FormOne;
 import tasks.OpenUp;
 
 public class WorlUtestStepDefinitions {
@@ -16,7 +17,7 @@ public class WorlUtestStepDefinitions {
 
     @Given("^than Evaristo wants to join the uTest community$")
     public void thanEvaristoWantsToJoinTheUTestCommunity() {
-        OnStage.theActorCalled("Evaristo").wasAbleTo(OpenUp.thePage());
+        OnStage.theActorCalled("Evaristo").wasAbleTo(OpenUp.thePage(), (FormOne.onThePage()));
     }
 
     @When("^he search for the registration form in the uTest community web page$")
